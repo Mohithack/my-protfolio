@@ -1,3 +1,14 @@
+document.addEventListener('contextmenu', e => e.preventDefault());
+document.addEventListener('keydown', e => {
+  if (
+    e.key === 'F12' ||
+    (e.ctrlKey && ['c', 'u', 's', 'a', 'p'].includes(e.key.toLowerCase())) ||
+    (e.metaKey && ['c', 'u', 's', 'a', 'p'].includes(e.key.toLowerCase()))
+  ) e.preventDefault();
+});
+document.addEventListener('copy', e => e.preventDefault());
+document.addEventListener('selectstart', e => e.preventDefault());
+
 /* =============================================
    NAVBAR — scroll effect + mobile menu
    ============================================= */
